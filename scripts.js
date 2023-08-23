@@ -63,6 +63,10 @@ equalsBtn.addEventListener('click', () => {
     resetVals();
 }) 
 
+deleteBtn.addEventListener('click', () => {
+    displayUpdate('this button doesn\'t work yet');
+})
+
 // change the display on button click
 const display = document.getElementById('screen-text');
 
@@ -93,7 +97,7 @@ const calcSolution = function (operator, a, b) {
         case '-': return subtract(a, b);
         case 'x': return multiply(a, b);
         case '/': if (b != 0) return divide(a, b)
-            else return null;
+            else return 'don\'t do that!';
         default: return null;
     }
 }
